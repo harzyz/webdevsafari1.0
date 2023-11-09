@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Poppins:wght@400;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html::-webkit-scrollbar{
+  width: 20px;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: #F9E0AE;
+}
+html::-webkit-scrollbar-track{
+  background-color: #FFFFFF;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 124px;
+  background: #F9E0AE;
+}
+.logo{
+  width: 38px;
+  height: 38px;
+}
+.logoText{
+  font-family: Jim Nightshade;
+  font-weight: 400;
+  font-size: 40px;
+}
+.navList{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: 600;
+  gap: 50px;
+}
+.contactBtn{
+  border: none;
+  width: 150px;
+  height: 39px;
+  border-radius: 10px;
+  background: #C24914;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFF;
+}
+.hero{
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 100px;
+}
+.heroOne{
+  width: 50%;
+  padding-top: 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.heroOne span{
+  font-weight: 700;
+  font-family: Poppins;
+  font-size: 48px;
+  line-height: 55px;
+}
+.heroOneText{
+  color: rgba(0, 0, 0, 0.46);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+}
+.startBtn{
+  width: 200px;
+  height: 44px;
+  border-radius: 10px;
+  background: #682C0E;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFF;
+  border: none;
+}
+.heroTwo{
+  width: 50%;
+}
+.next{
+  display: flex;
+  width: 100%;
+  margin-top: 235px;
+  padding: 0 100px;
+}
+.nextImg{
+  width: 50%;
+}
+.nextInfo{
+  width: 50%;
+  padding-top: 76px;
+  display: flex;
+  flex-direction: column;
+}
+.nextInfo span{
+  font-size: 48px;
+  font-weight: 600;
+  font-family: Poppins;
+}
+.nextList{
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 400;
+}
+.startLearning{
+  display: flex;
+  width: 100%;
+  padding: 0 100px;
+  gap: 91px;
+  margin-top: 263px;
+}
+.startLearningText{
+  font-size: 48px;
+  font-weight: 600;
+  font-family: Poppins;
+}
+.subscribe{
+  margin-top: 110px;
+  width: 100%;
+  padding: 0 100px;
+  height: 100%;
+}
+.fig{
+  width: 100%;
+  height: 140px;
+  background: #F9E0AE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+.fig input{
+  width: 300px;
+  height: 63px;
+  border: none;
+  background: #FFFFFF;
+}
+.fig input::placeholder{
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+}
+.fig button{
+  border: none;
+  width: 300px;
+  height: 63px;
+  background: #C24914;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+}
+.joinCommunity{
+  margin-top: 300px;
+  position: relative;
+  width: 100%;
+  height: 750px;
+  padding-left: 100px;
+}
+.joinCommunity img{
+  position: absolute;
+}
+.pointAtGirl{
+  right: 150px;
+  top: 0;
+}
+.suitGuy{
+  right: 100px;
+  top: 40px;
+}
+.suitWoman{
+  top: -150px;
+  right: 43%;
+}
+.shirtGuy{
+  left: 8%;
+  top: 35%;
+}
+.suitLady{
+  left: 30%;
+  top: 55%;
+}
+.community{
+  text-align: center;
+  width: 531px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.community span{
+  z-index: 3;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 600;;
+}
+.community p{
+  z-index: 3;
+}
+.community button{
+  z-index: 3;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  width: 273px;
+  height: 54px;
+  border-radius: 10px;
+  background: #FC8621;
+}
+footer{
+  font-family: Poppins;
+  font-weight: 400;
+  width: 100%;
+  height: 442px;
+  background: #F9E0AE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.socials{
+  padding-top: 38px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
