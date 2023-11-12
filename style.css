@@ -19,7 +19,8 @@ nav{
   justify-content: space-around;
   width: 100%;
   height: 124px;
-  background: #F9E0AE;
+  background: #F9E0AE ;
+  position: relative;
 }
 .logo{
   width: 38px;
@@ -37,6 +38,7 @@ nav{
   font-family: Poppins;
   font-weight: 600;
   gap: 50px;
+  cursor: pointer;
 }
 .contactBtn{
   border: none;
@@ -239,4 +241,201 @@ footer{
   display: flex;
   align-items: center;
   gap: 15px;
+}
+#navShow{
+  display: none;
+}
+#blogList{
+  display: none;
+}
+.blogList{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  height: 100px;
+  width: 80px;
+  padding: 10px;
+  align-items: center;
+  background: black;
+  color: white;
+  bottom: -50px;
+  right: 30%;
+}
+.navMob{
+  display: none;
+}
+.fa-solid{
+  display: none;
+}
+.you{
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  nav{
+    height: 80px;
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+  .navListMob{
+    background: #F9E0AE;
+    position: absolute;
+    
+    align-items: center;
+    height: 200px;
+    width: 150px;
+    bottom: -200px;
+    right: 0;
+    
+  }
+  .contactBtn{
+    width: 90px;
+    font-size: 14px;
+    
+  }
+  .navMob{
+    list-style: none;
+    gap: 15px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .navList{
+    display: none;
+  }
+  #blogList{
+    display: none;
+  }
+  i{
+    font-size: 30px;
+  }
+  .you{
+    display: block;
+  }
+  .hero{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 15px;
+    gap: 50px;
+    margin-top: 10px;
+  }
+  #navShow{
+    display: none;
+  }
+  .heroOne{
+    width: 100%;
+  }
+  .heroOne span{
+    font-size: 35px;
+    line-height: 38px;
+  }
+  .heroTwo{
+    width: 100%;
+  }
+  .heroTwo img{
+    width: 100%;
+  }
+  .next{
+    width: 100%;
+    padding: 0;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    gap: 50px;
+  }
+  .nextImg{
+    width: 100%;
+    padding: 0 15px;
+  }
+  .nextImg img{
+    width: 100%;
+  }
+  .nextInfo{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .nextInfo span{
+    font-size: 35px;
+  }
+  .nextList{
+    font-size: 16px;
+  }
+  .startLearning{
+    padding: 0 15px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 100px;
+  }
+  .startLearningText{
+    font-size: 35px;
+    text-align: center;
+  }
+  .yellowGirl{
+    width: 100%;
+  }
+  .subscribe{
+    padding: 0;
+    width: 100%;
+  }
+  .joinCommunity{
+    height: 250px;
+    margin-top: 100px;
+  }
+  .community{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .community span{
+    font-size: 35px;
+  }
+  .pointAtGirl{
+    width: 100%;
+    bottom: 0px;
+    right: 0;
+    display: none;
+  }
+  .suitGuy{
+    display: none;
+  }
+  .suitLady{
+    display: none;
+  }
+  .suitWoman{
+    display: none;
+  }
+  .shirtGuy{
+    display: none;
+  }
+  .subscribe{
+    display: flex;
+    justify-content: center;
+  }
+  .fig{
+    gap: 10px;
+    width: 95%;
+  }
+  .fig input{
+    width: 80px;
+    height: 30px;
+  }
+  .fig input::placeholder{
+    font-size: 14px;
+  }
+  .fig button{
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+  }
+  footer{
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 80px;
+  }
 }

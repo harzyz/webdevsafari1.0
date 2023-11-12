@@ -1,106 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Educare</title>
-</head>
-<body>
-  <nav>
-    <div>
-      <img class="logo" src="./images/educareLogo.svg" alt="">
-    <span class="logoText">Educare</span>
-    </div>
-
-    <ul class="navList">
-      <li>Home</li>
-      <li>About</li>
-      <li>Courses <img src="./images/arrowDown.svg" alt=""></li>
-      <li>Blog <img src="./images/arrowDown.svg" alt=""></li>
-      <li><button class="contactBtn">Contact Us</button></li>
-    </ul>
-  </nav>
-  <section class="hero">
-    <div class="heroOne">
-      <span>Start learning <br /> with us now</span>
-      <p class="heroOneText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laboriosam  voluptates sed beatae?</p>
-      <button class="startBtn">Start Learning</button>
-    </div>
-    <div class="heroTwo">
-      <img src="./images/heroImg.png" alt="">
-    </div>
-  </section>
-  <section class="next">
-    <div class="nextImg">
-      <img src="./images/section2Img.png" alt="">
-    </div>
-    <div class="nextInfo">
-      <span>Welcome to the <br/> online centers</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Educare</title>
+  </head>
+  <body>
+    <nav>
       <div>
-        <ul class="nextList">
-          <li>Start learning from your experience</li>
-          <li>Enhance your skills with us now</li>
-          <li>Do your favorite course</li>
+        <img class="logo" src="./images/educareLogo.svg" alt="" />
+        <span class="logoText">Educare</span>
+      </div>
+
+      <ul class="navList">
+        <li>Home</li>
+        <li>About</li>
+        <li>
+          Courses
+          <img
+            onclick="toggleCaret(caret)"
+            id="arrow"
+            src="./images/arrowDown.svg"
+            alt="" />
+        </li>
+        <li>
+          Blog
+          <img
+            onclick="toggleCaret(caret1)"
+            id="arrow1"
+            src="./images/arrowDown.svg"
+            alt="" />
+        </li>
+        <li><button class="contactBtn">Contact Us</button></li>
+      </ul>
+      <div id="blogList" class="blogList">
+        <p>Blog 1</p>
+        <p>Blog 2</p>
+        <p>Blog 3</p>
+      </div>
+      <div class="you"><i onclick ="toggleNav()" class="fa-solid fa-bars"></i></div>
+      <div id="navShow" class="navListMob">
+        <ul class="navMob">
+          <li>Home</li>
+          <li>About</li>
+          <li>Courses</li>
+          <li>Blog</li>
+          <li><button class="contactBtn">Contact Us</button></li>
         </ul>
       </div>
-    </div>
-  </section>
-  <section class="startLearning">
-    <div>
-      <span class="startLearningText">Start learning by <br> creating free account <br> and get register</span>
-    </div>
-    <div>
-      <img src="./images/yellowGirl.jpg" alt="">
-    </div>
-  </section>
-  <figure class="subscribe">
-    <div class="fig">
-      <input placeholder="Your Name" type="text">
-      <input placeholder="Your email address" type="text">
-      <button>Subscribe</button>
-    </div>
-  </figure>
-  <figure class="joinCommunity">
-    <div class="community">
-      <span>Start growing with <br> our community</span>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-      <button>Join Community</button>
-    </div>
-    <img class="pointAtGirl" src="./images/pointingGirl.svg" alt="">
-    <img class="suitGuy" src="./images/blacksuitMan.png" alt="">
-    <img class="suitWoman" src="./images/blacksuitWoman.png" alt="">
-    <img class="shirtGuy" src="./images/shirtGuy.png" alt="">
-    <img class="suitLady" src="./images/ashsuitLady.png" alt="">
-  </figure>
-  <footer>
-    <div>
-      <img class="logo" src="./images/educareLogo.svg" alt="">
-      <span class="logoText">Educare</span>
-    </div>
-    <div>
-      <h3>Follow us</h3>
-      <div class="socials">
-        <img src="./images/twitter.png" alt="">
-        <img src="./images/linkedin.png" alt="">
-        <img src="./images/facebook.png" alt="">
-        <img src="./images/instagram.png" alt="">
+    </nav>
+    <section class="hero">
+      <div class="heroOne">
+        <span
+          >Start learning <br />
+          with us now</span
+        >
+        <p class="heroOneText">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+          laboriosam voluptates sed beatae?
+        </p>
+        <button class="startBtn">Start Learning</button>
       </div>
-    </div>
-    <div>
-      <h3>Useful Links</h3>
-      <ul>
-        <li>Our Projects</li>
-        <li>FAQ's</li>
-        <li>News and Updates</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Contacts</h3>
-      <p>Address : 4-5 Main road , Delhi</p>
-      <p>Email : educarep<span>@</span>gmail.com</p>
-      <p>Phone Number : +91 4533433265</p>
-    </div>
-  </footer>
-</body>
+      <div class="heroTwo">
+        <img src="./images/heroImg.png" alt="" />
+      </div>
+    </section>
+    <section class="next">
+      <div class="nextImg">
+        <img src="./images/section2Img.png" alt="" />
+      </div>
+      <div class="nextInfo">
+        <span
+          >Welcome to the <br />
+          online centers</span
+        >
+        <div>
+          <ul class="nextList">
+            <li>Start learning from your experience</li>
+            <li>Enhance your skills with us now</li>
+            <li>Do your favorite course</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="startLearning">
+      <div>
+        <span class="startLearningText"
+          >Start learning by <br />
+          creating free account <br />
+          and get register</span
+        >
+      </div>
+      <div>
+        <img class="yellowGirl" src="./images/yellowGirl.jpg" alt="" />
+      </div>
+    </section>
+    <figure class="subscribe">
+      <div class="fig">
+        <input placeholder="Your Name" type="text" />
+        <input placeholder="Your email address" type="text" />
+        <button>Subscribe</button>
+      </div>
+    </figure>
+    <figure class="joinCommunity">
+      <div class="community">
+        <span
+          >Start growing with <br />
+          our community</span
+        >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <button>Join Community</button>
+      </div>
+      <img class="pointAtGirl" src="./images/pointingGirl.svg" alt="" />
+      <img class="suitGuy" src="./images/blacksuitMan.png" alt="" />
+      <img class="suitWoman" src="./images/blacksuitWoman.png" alt="" />
+      <img class="shirtGuy" src="./images/shirtGuy.png" alt="" />
+      <img class="suitLady" src="./images/ashsuitLady.png" alt="" />
+    </figure>
+    <footer>
+      <div>
+        <img class="logo" src="./images/educareLogo.svg" alt="" />
+        <span class="logoText">Educare</span>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <div class="socials">
+          <img src="./images/twitter.png" alt="" />
+          <img src="./images/linkedin.png" alt="" />
+          <img src="./images/facebook.png" alt="" />
+          <img src="./images/instagram.png" alt="" />
+        </div>
+      </div>
+      <div>
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Our Projects</li>
+          <li>FAQ's</li>
+          <li>News and Updates</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacts</h3>
+        <p>Address : 4-5 Main road , Delhi</p>
+        <p>Email : educarep<span>@</span>gmail.com</p>
+        <p>Phone Number : +91 4533433265</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./main.js"></script>
 </html>
