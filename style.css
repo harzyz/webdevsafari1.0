@@ -401,15 +401,23 @@ footer a {
     flex-direction: column;
     /* align-items: center; */
   }
-  
+  .only{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 20px; 
+  }
   .site-nav li {
     /* border: 1px solid #C24914; */
     height: 50px;
     display: flex;
-    justify-content: center;
+    /* gap: 30px; */
+    font-family: Poppins;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
   }
-  .site-nav li:hover{
+  .site-nav li:hover,.site-nav li:focus{
     background: #C24914;
   }
   /* fixes */
@@ -430,6 +438,9 @@ footer a {
   }
   i {
     font-size: 30px;
+  }
+  ul i{
+    font-size: 20px;
   }
   .hero {
     flex-direction: column;
