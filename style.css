@@ -1,37 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Poppins:wght@400;600;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Poppins:wght@400;600;700&display=swap");
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-html::-webkit-scrollbar{
+
+/* Tutorial for now */
+:root {
+  --bar-width: 30px;
+  --bar-height: 5px;
+  --hamburger-gap: 6px;
+  --foreground: #333;
+  --background: white;
+  --hamburger-margin: 8px;
+  --anime-time: 200ms ease-in-out;
+  ---hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+.hamburgerMenu{
+  /* display: none; */
+  --x-width: calc(var(---hamburger-height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  top: 20px;
+  right: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+.hamburgerMenu::before,
+.hamburgerMenu::after,
+.hamburgerMenu input{
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 100px;
+  transform-origin: left center;
+  transition: opacity var(--anime-time), width var(--anime-time), rotate var(--anime-time), translate var(--anime-time), background-color var(--anime-time);
+}
+.hamburgerMenu input{
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+.hamburgerMenu:has(input:checked)::before{
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+  /* background-color: #fff; */
+}
+.hamburgerMenu:has(input:checked)::after{
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+  /* background-color: #fff; */
+}
+.hamburgerMenu input:checked{
+  opacity: 0px;
+  width: 0px; 
+}
+.hamburgerMenu:has(input:checked) + .navListMob{
+  translate: 0;
+}
+/* Tutorial for now */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html::-webkit-scrollbar {
   width: 20px;
 }
-html::-webkit-scrollbar-thumb{
-  background-color: #F9E0AE;
+html::-webkit-scrollbar-thumb {
+  background-color: #f9e0ae;
 }
-html::-webkit-scrollbar-track{
-  background-color: #FFFFFF;
+html::-webkit-scrollbar-track {
+  background-color: #ffffff;
 }
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 124px;
-  background: #F9E0AE ;
+  background: #f9e0ae;
   position: relative;
 }
-.logo{
+.logo {
   width: 38px;
   height: 38px;
 }
-.logoText{
+.logoText {
   font-family: Jim Nightshade;
   font-weight: 400;
   font-size: 40px;
 }
-.navList{
+.navList {
   list-style: none;
   display: flex;
   align-items: center;
@@ -40,160 +110,160 @@ nav{
   gap: 50px;
   cursor: pointer;
 }
-.contactBtn{
+.contactBtn {
   border: none;
   width: 150px;
   height: 39px;
   border-radius: 10px;
-  background: #C24914;
+  background: #c24914;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 700;
-  color: #FFFF;
+  color: #ffff;
 }
-.hero{
+.hero {
   display: flex;
   width: 100%;
   margin-top: 50px;
   padding: 0 100px;
 }
-.heroOne{
+.heroOne {
   width: 50%;
   padding-top: 76px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.heroOne span{
+.heroOne span {
   font-weight: 700;
   font-family: Poppins;
   font-size: 48px;
   line-height: 55px;
 }
-.heroOneText{
+.heroOneText {
   color: rgba(0, 0, 0, 0.46);
   font-family: Poppins;
   font-size: 20px;
   font-weight: 400;
 }
-.startBtn{
+.startBtn {
   width: 200px;
   height: 44px;
   border-radius: 10px;
-  background: #682C0E;
+  background: #682c0e;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 700;
-  color: #FFFF;
+  color: #ffff;
   border: none;
 }
-.heroTwo{
+.heroTwo {
   width: 50%;
 }
-.next{
+.next {
   display: flex;
   width: 100%;
   margin-top: 235px;
   padding: 0 100px;
 }
-.nextImg{
+.nextImg {
   width: 50%;
 }
-.nextInfo{
+.nextInfo {
   width: 50%;
   padding-top: 76px;
   display: flex;
   flex-direction: column;
 }
-.nextInfo span{
+.nextInfo span {
   font-size: 48px;
   font-weight: 600;
   font-family: Poppins;
 }
-.nextList{
+.nextList {
   font-size: 24px;
   font-family: Poppins;
   font-weight: 400;
 }
-.startLearning{
+.startLearning {
   display: flex;
   width: 100%;
   padding: 0 100px;
   gap: 91px;
   margin-top: 263px;
 }
-.startLearningText{
+.startLearningText {
   font-size: 48px;
   font-weight: 600;
   font-family: Poppins;
 }
-.subscribe{
+.subscribe {
   margin-top: 110px;
   width: 100%;
   padding: 0 100px;
   height: 100%;
 }
-.fig{
+.fig {
   width: 100%;
   height: 140px;
-  background: #F9E0AE;
+  background: #f9e0ae;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 45px;
 }
-.fig input{
+.fig input {
   width: 300px;
   height: 63px;
   border: none;
-  background: #FFFFFF;
+  background: #ffffff;
 }
-.fig input::placeholder{
+.fig input::placeholder {
   text-align: center;
   font-family: Poppins;
   font-size: 20px;
 }
-.fig button{
+.fig button {
   border: none;
   width: 300px;
   height: 63px;
-  background: #C24914;
-  color: #FFF;
+  background: #c24914;
+  color: #fff;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 700;
 }
-.joinCommunity{
+.joinCommunity {
   margin-top: 300px;
   position: relative;
   width: 100%;
   height: 750px;
   padding-left: 100px;
 }
-.joinCommunity img{
+.joinCommunity img {
   position: absolute;
 }
-.pointAtGirl{
+.pointAtGirl {
   right: 150px;
   top: 0;
 }
-.suitGuy{
+.suitGuy {
   right: 100px;
   top: 40px;
 }
-.suitWoman{
+.suitWoman {
   top: -150px;
   right: 43%;
 }
-.shirtGuy{
+.shirtGuy {
   left: 8%;
   top: 35%;
 }
-.suitLady{
+.suitLady {
   left: 30%;
   top: 55%;
 }
-.community{
+.community {
   text-align: center;
   width: 531px;
   display: flex;
@@ -201,21 +271,21 @@ nav{
   gap: 20px;
   align-items: center;
 }
-.community span{
+.community span {
   z-index: 3;
   color: #000;
   text-align: center;
   font-family: Poppins;
   font-size: 48px;
-  font-weight: 600;;
+  font-weight: 600;
 }
-.community p{
+.community p {
   z-index: 3;
 }
-.community button{
+.community button {
   z-index: 3;
   border: none;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Poppins;
   font-size: 20px;
@@ -223,32 +293,36 @@ nav{
   width: 273px;
   height: 54px;
   border-radius: 10px;
-  background: #FC8621;
+  background: #fc8621;
 }
-footer{
+footer {
   font-family: Poppins;
   font-weight: 400;
   width: 100%;
   height: 442px;
-  background: #F9E0AE;
+  background: #f9e0ae;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 100px;
 }
-.socials{
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.socials {
   padding-top: 38px;
   display: flex;
   align-items: center;
   gap: 15px;
 }
-#navShow{
+#navShow {
   display: none;
 }
-#blogList{
+#blogList {
   display: none;
 }
-.blogList{
+.blogList {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -263,57 +337,101 @@ footer{
   bottom: -50px;
   right: 30%;
 }
-.navMob{
+.navMob {
   display: none;
 }
-.fa-solid{
+.boy{
   display: none;
 }
-.you{
+.menu-toggle{
   display: none;
 }
 @media screen and (max-width: 700px) {
-  nav{
-    height: 80px;
+  nav {
+    height: 100px;
     padding: 0 15px;
     justify-content: space-between;
   }
-  .navListMob{
-    background: #F9E0AE;
-    position: absolute;
-    
-    align-items: center;
-    height: 200px;
-    width: 150px;
-    bottom: -200px;
-    right: 0;
-    
+  .boy{
+    display: block;
   }
-  .contactBtn{
+  .navListMob {
+    background: #f9e0ae;
+    position: absolute;
+    /* height: 100%; */
+    width: 200px;
+    bottom: -200px;
+    right: 0%;
+  }
+  .contactBtn {
     width: 90px;
     font-size: 14px;
-    
   }
-  .navMob{
+  /* fixes */
+  .menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    cursor: pointer;
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    width: 50%;
+    top: 100px;
+    right: 0%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #F9E0AE;
+    clip-path: circle(0px at top right);
+    transition: clip-path 0.5s;
+    /* list-style: none; */
+  }
+  .site-nav.open {
+    /* max-height: 500px; */
+    clip-path: circle(250% at top right);
+    /* display: block; */
+  }
+  .site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  
+  .site-nav li {
+    /* border: 1px solid #C24914; */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-nav li:hover{
+    background: #C24914;
+  }
+  /* fixes */
+  
+  .navMob {
     list-style: none;
     gap: 15px;
+    padding-top: 30px;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
   }
-  .navList{
+  .navList {
     display: none;
   }
-  #blogList{
+  #blogList {
     display: none;
   }
-  i{
+  i {
     font-size: 30px;
   }
-  .you{
-    display: block;
-  }
-  .hero{
+  .hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -322,117 +440,117 @@ footer{
     gap: 50px;
     margin-top: 10px;
   }
-  #navShow{
-    display: none;
+  #navShow {
+    display: block;
   }
-  .heroOne{
+  .heroOne {
     width: 100%;
   }
-  .heroOne span{
+  .heroOne span {
     font-size: 35px;
     line-height: 38px;
   }
-  .heroTwo{
+  .heroTwo {
     width: 100%;
   }
-  .heroTwo img{
+  .heroTwo img {
     width: 100%;
   }
-  .next{
+  .next {
     width: 100%;
     padding: 0;
     flex-direction: column-reverse;
     margin-top: 50px;
     gap: 50px;
   }
-  .nextImg{
+  .nextImg {
     width: 100%;
     padding: 0 15px;
   }
-  .nextImg img{
+  .nextImg img {
     width: 100%;
   }
-  .nextInfo{
+  .nextInfo {
     width: 100%;
     justify-content: center;
     align-items: center;
   }
-  .nextInfo span{
+  .nextInfo span {
     font-size: 35px;
   }
-  .nextList{
+  .nextList {
     font-size: 16px;
   }
-  .startLearning{
+  .startLearning {
     padding: 0 15px;
     flex-direction: column;
     width: 100%;
     align-items: center;
     margin-top: 100px;
   }
-  .startLearningText{
+  .startLearningText {
     font-size: 35px;
     text-align: center;
   }
-  .yellowGirl{
+  .yellowGirl {
     width: 100%;
   }
-  .subscribe{
+  .subscribe {
     padding: 0;
     width: 100%;
   }
-  .joinCommunity{
+  .joinCommunity {
     height: 250px;
     margin-top: 100px;
   }
-  .community{
+  .community {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
   }
-  .community span{
+  .community span {
     font-size: 35px;
   }
-  .pointAtGirl{
+  .pointAtGirl {
     width: 100%;
     bottom: 0px;
     right: 0;
     display: none;
   }
-  .suitGuy{
+  .suitGuy {
     display: none;
   }
-  .suitLady{
+  .suitLady {
     display: none;
   }
-  .suitWoman{
+  .suitWoman {
     display: none;
   }
-  .shirtGuy{
+  .shirtGuy {
     display: none;
   }
-  .subscribe{
+  .subscribe {
     display: flex;
     justify-content: center;
   }
-  .fig{
+  .fig {
     gap: 10px;
     width: 95%;
   }
-  .fig input{
+  .fig input {
     width: 80px;
     height: 30px;
   }
-  .fig input::placeholder{
+  .fig input::placeholder {
     font-size: 14px;
   }
-  .fig button{
+  .fig button {
     width: 100px;
     height: 30px;
     font-size: 14px;
   }
-  footer{
+  footer {
     flex-direction: column;
     height: 100%;
     padding-bottom: 100px;

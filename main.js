@@ -17,11 +17,18 @@ function toggleCaret(button){
   }
 }
 
-function toggleNav(){
-  beans = !beans
-  if(beans){
-    sidenav.style.display = 'block'
-  }else{
-    sidenav.style.display = 'none'
-  }
+let subMenu = document.getElementById('navShow')
+
+function toggleSubMenu() {
+  subMenu.classList.toggle('open');
 }
+
+// document.addEventListener('click', function (event) {
+//   // Check if the clicked element is inside the submenu
+//   var isClickInsideSubMenu = subMenu.contains(event.target);
+
+//   // If the clicked element is outside the submenu, close the submenu
+//   if (!isClickInsideSubMenu) {
+//     subMenu.classList.remove('open');
+//   }
+// });
